@@ -1,30 +1,30 @@
 class Queue{
     constructor(){
-        this.item = [];
+        this.items = [];
     }
     /* 进队列 */
     enQueue(element){
-        this.item.push(element);
+        this.items.push(element);
     }
     /* 出队列 */
     deQueue(){
-        return this.item.shift();
+        return this.items.shift();
     }
     /* 返回队首元素 */
     front(){
-        return this.item[0];
+        return this.items[0];
     }
     /* 判断队列是否为空 */
     isEmpty(){
-        return this.item.length === 0;
+        return this.items.length === 0;
     }
     /* 队列大小 */
     size(){
-        return this.item.length;
+        return this.items.length;
     }
     /* 打印队列 */
     print(){
-        console.log(this.item.toString());
+        console.log(this.items.toString());
     }
 }
 
