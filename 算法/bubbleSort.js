@@ -13,11 +13,18 @@ function bubbleSort(randomArray) {
                 randomArray.swap(arr, inner, inner + 1);
             }
         }
-        console.log(`第${outer}：${randomArray.toString()}`);
+        // console.log(`第${outer}：${randomArray.toString()}`);
     }
 }
 
 // 测试冒泡排序
-let randomArray = randomNums(10);
+let len = 10000;
+let randomArray = randomNums(len);
+
+const start = new Date();
+
 bubbleSort(randomArray);
-console.log('sort:\n' + randomArray.toString());
+console.log('\nsort:\n' + randomArray.toString());
+
+const ms = new Date() -start;
+console.log(`冒泡排序${len}个随机数，花费${ms}ms`);
